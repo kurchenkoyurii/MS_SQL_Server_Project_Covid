@@ -1,3 +1,8 @@
+
+-- This project presents SQL queries to extract, sort, 
+-- and manipulate with BIG DATA, that https://ourworldindata.org/covid-deaths provides.
+
+
 SELECT *
 FROM PortfolioProject..CovidDeath
 ORDER BY 3,4
@@ -63,7 +68,7 @@ ORDER BY PercentPopulationInfected DESC
 -- Countries with Highest Death Count per Population
 SELECT 
 		location,
-		MAX(cast(total_deaths AS INT))AS TotalDeathCount
+		MAX(CAST(total_deaths AS INT))AS TotalDeathCount
 FROM PortfolioProject..CovidDeath
 WHERE continent IS NOT NULL
 GROUP BY location
